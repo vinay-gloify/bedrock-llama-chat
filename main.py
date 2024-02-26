@@ -14,11 +14,6 @@ def root():
     return {'message': 'Hello World!!'}
 
 
-@app.get('/welcome')
-def getName(name:str):
-    return {'Hello 'f'{name}'}
-
-
 @app.post('/chat')
 async def chatApp(prompt:Prompt):
     prompt_data= prompt.prompt
